@@ -3,7 +3,7 @@
   "name": "dumi-template",
   "version": "1.0.0",
   "scripts": {
-    "start": "dumi dev",
+    "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "build": "father-build",
@@ -16,9 +16,6 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/umijs/dumi-template",
