@@ -1,5 +1,5 @@
 ---
-title: dumi - 为组件开发场景而生的文档工具
+title: 故事书
 order: 10
 hero:
   title: dumi
