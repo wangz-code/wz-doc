@@ -1,7 +1,7 @@
 /*
  * @Author: wangqz
  * @Date: 2022-08-17
- * @LastEditTime: 2022-08-17
+ * @LastEditTime: 2022-08-18
  * @Description: content
  */
 import React from 'react';
@@ -65,7 +65,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <>
+      <div>
         <div id="clockbody" className="light">
           <div className="light">
             <div className="clock">
@@ -101,7 +101,7 @@ export default class Home extends React.Component {
         </div>
         <h3 style={topStyle}>世间本无路，走的人多了，也就成了路。</h3>
         <h3 style={divStyle}>——鲁迅</h3>
-      </>
+      </div>
     );
   }
 }

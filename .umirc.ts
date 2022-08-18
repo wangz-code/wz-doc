@@ -9,9 +9,10 @@ export default defineConfig({
   outputPath: 'docs-dist',
   locales: [['zh-CN', '中文']],
   mode: 'doc',
-  hash: true,
-  base: `./`,
-  publicPath: `./`,
+  hash: false,
+  // Because of using GitHub Pages
+  // base: `/${repo}/`,
+  // publicPath: `/${repo}/`,
   navs: [],
   // more config: https://d.umijs.org/config
 });
