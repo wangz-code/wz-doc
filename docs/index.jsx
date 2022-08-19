@@ -11,15 +11,56 @@ const topStyle = {
 };
 const divStyle = {
   textAlign: 'right',
-  height: 'calc(100vh - 58vh - 190px)',
+  height: 'calc(100vh - 58vh - 290px)',
+};
+
+const http = {
+  get(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var res = JSON.parse(xhr.responseText);
+        callback(res);
+      }
+    };
+  },
+  post(url, data, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.send(data);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        var res = JSON.parse(xhr.responseText);
+        callback(res);
+      }
+    };
+  },
 };
 
 export default class Home extends React.Component {
+  state = {
+    hitokoto: {},
+  };
+
   toggleClass = () => {
     const body = document.getElementById('clockbody');
     body.classList.toggle('light');
   };
+
+  hitokoto = () => {
+    http.get('https://v1.hitokoto.cn', res => {
+      console.log('res log==>', res);
+      this.setState({
+        hitokoto: res,
+      });
+    });
+  };
+
   componentDidMount() {
+    this.hitokoto();
     const hr = document.querySelector('#hr');
     const mn = document.querySelector('#mn');
     const sc = document.querySelector('#sc');
@@ -99,8 +140,14 @@ export default class Home extends React.Component {
             <div className="toggleClass" onClick={this.toggleClass}></div>
           </div>
         </div>
-        <h3 style={topStyle}>世间本无路，走的人多了，也就成了路。</h3>
-        <h3 style={divStyle}>——鲁迅</h3>
+
+        <h4 style={topStyle}>
+          如果尖锐的批评完全消失，温和的批评将会变得刺耳。如果温和的批评也不被允许，沉默将被认为居心叵测。如果沉默也不再允许，赞扬不够卖力将是一种罪行。如果只允许一种声音存在，那么，唯一存在的那个声音就是谎言。
+        </h4>
+        <h4 style={divStyle}>- 柏拉图</h4>
+        <br />
+        <h4 >{this.state.hitokoto.hitokoto}</h4>
+        
       </div>
     );
   }
