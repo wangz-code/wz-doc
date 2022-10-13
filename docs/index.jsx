@@ -14,6 +14,11 @@ const divStyle = {
   height: 'calc(100vh - 58vh - 290px)',
 };
 
+const beianStyle = {
+  marginRight: '10px',
+  marginTop: '30px',
+};
+
 const http = {
   get(url, callback) {
     var xhr = new XMLHttpRequest();
@@ -73,10 +78,7 @@ export default class Home extends React.Component {
       //   <img width="15"  src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png"/>
       //   <span>&nbsp; 豫ICP备2022007076号</span>
       //  </a>
-      footer.innerHTML = `
-       <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2022007076号-1</a>
-        <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2022007076号</a>
-       `;
+      footer.innerHTML = '';
     }, 0);
 
     setInterval(() => {
@@ -150,6 +152,19 @@ export default class Home extends React.Component {
         <h4 style={divStyle}>- 柏拉图</h4>
         <br />
         <h4>{this.state.hitokoto.hitokoto}</h4>
+
+        <div style={beianStyle}>
+          <a
+            style={beianStyle}
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+          >
+            豫ICP备2022007076号-1
+          </a>
+          <a href="https://beian.miit.gov.cn/" target="_blank">
+            豫ICP备2022007076号
+          </a>
+        </div>
       </div>
     );
   }
