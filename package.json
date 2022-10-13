@@ -14,8 +14,8 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "preview": "cd docs-dist && vite --port 9090"
-
+    "preview": "cd docs-dist && vite --port 9090",
+    "pushdoc": "curl https://djgo.cc/print/publish"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
