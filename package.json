@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "dumi dev",
     "build": "npm run docs:build",
+    "analyze": "ANALYZE=1 npm run build",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "build-father": "father-build",
