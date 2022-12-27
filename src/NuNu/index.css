@@ -1,0 +1,32 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.pagesize {
+  width: 80px;
+}
+
+m-sm {
+  margin: 5px;
+}
+.card-mv{
+    margin:10px
+}
+.fill{
+    width: fit-content;
+}
+.flex-grad {
+  display: grid;
+  grid-template-columns: 18% 18% 18% 18% 18%;
+  grid-template-rows: 380px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.text-max{
+    width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}

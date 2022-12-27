@@ -16,7 +16,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "preview": "cd docs-dist && vite --port 9090",
-    "pushdoc": "curl https://djgo.cc/print/publish"
+    "pushdoc": "curl http://101.35.152.209:4000/publish"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
