@@ -49,7 +49,11 @@ export class NuNu extends React.Component {
           pages.push(1);
         } else {
           for (let i = 0; i < Math.ceil(result.count / limit); i++) {
-            pages.push(i + 1);
+            if (pages.length < 5) {
+              pages.push(i + 1);
+            } else if (i < Math.ceil(result.count / limit) - 1) {
+              pages.push(i + 1);
+            }
           }
         }
         console.log(result);
@@ -128,6 +132,7 @@ export class NuNu extends React.Component {
                   <img
                     src={item.thumb}
                     alt={item.name}
+                    referrerPolicy="no-referrer"
                     className="img-responsive fill"
                   />
                 </div>
