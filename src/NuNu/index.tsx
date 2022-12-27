@@ -132,7 +132,7 @@ export class NuNu extends React.Component {
                   <img
                     src={item.thumb}
                     alt={item.name}
-                    referrerPolicy="no-referrer"
+                    referrerpolicy="no-referrer"
                     className="img-responsive fill"
                   />
                 </div>
