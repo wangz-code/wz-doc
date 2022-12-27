@@ -51,7 +51,7 @@ export class NuNu extends React.Component {
           for (let i = 0; i < Math.ceil(result.count / limit); i++) {
             if (pages.length < 5) {
               pages.push(i + 1);
-            } else if (i < Math.ceil(result.count / limit) - 1) {
+            } else if (i == Math.ceil(result.count / limit) - 1) {
               pages.push(i + 1);
             }
           }
