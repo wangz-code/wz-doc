@@ -4,15 +4,15 @@ nav:
   path: /components
 ---
 
-## Foo
+## NuNu
 
 Demo:
 
 ```tsx
 import React from 'react';
-import { Foo } from 'dumi-template';
+import { NuNu } from 'wz-doc';
 
-export default () => <Foo title="First Demo" />;
+export default () => <NuNu title="First Demo" />;
 ```
 
 More skills for writing demo: https://d.umijs.org/guide/demo-principle

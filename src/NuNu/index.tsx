@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import '../../public/spectre.css';
 import './index.css';
 
 const http = {
-  get(url, callback) {
+  get(url:any, callback:any) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.send();
@@ -29,22 +29,22 @@ export class NuNu extends React.Component {
     };
   }
 
-  queryChange(val) {
+  queryChange(val:any) {
     this.setState(val, this.query);
   }
 
-  showDetail(href) {
+  showDetail(href:any) {
     window.open(href, 'target');
   }
 
   // 计算分页  [1~5] 尾页
   query() {
-    const { limit, page, where } = this.state;
+    const { limit, page, where } = this.state as any;
     http.get(
       `https://djgo.cc/print/getvideo?page=${page}&limit=${limit}&where=${where}`,
       result => {
         // 计算分页
-        const pages = [];
+        const pages = [] as any[];
         if (result.count <= limit) {
           pages.push(1);
         } else {
@@ -56,15 +56,12 @@ export class NuNu extends React.Component {
             }
           }
         }
-        console.log(result);
         this.setState({ result, pages });
       },
     );
   }
 
   componentDidMount() {
-    console.log('this log==>', this);
-
     this.query();
   }
 

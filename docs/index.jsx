@@ -1,18 +1,21 @@
 /*
  * @Author: wangqz
  * @Date: 2022-08-17
- * @LastEditTime: 2022-10-13
+ * @LastEditTime: 2023-02-02
  * @Description: content
  */
 import React from 'react';
 import './index.css';
 
 const topStyle = {
-  marginTop: '2vh',
+  marginTop: '10vh',
+  color: '#787b80',
+  fontWeight: '400',
 };
 const divStyle = {
   textAlign: 'right',
-  height: 'calc(100vh - 58vh - 290px)',
+  color: '#787b80',
+  height: 'calc(100vh - 58vh - 340px)',
 };
 
 const beianStyle = {
@@ -25,7 +28,7 @@ const http = {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.send();
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
         var res = JSON.parse(xhr.responseText);
         callback(res);
@@ -37,7 +40,7 @@ const http = {
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send(data);
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (xhr.readyState == 4 && xhr.status == 200) {
         var res = JSON.parse(xhr.responseText);
         callback(res);
@@ -57,7 +60,7 @@ export default class Home extends React.Component {
   };
 
   hitokoto = () => {
-    http.get('https://v1.hitokoto.cn', res => {
+    http.get('https://v1.hitokoto.cn', (res) => {
       console.log('res log==>', res);
       this.setState({
         hitokoto: res,
@@ -66,21 +69,11 @@ export default class Home extends React.Component {
   };
 
   componentDidMount() {
-    this.hitokoto();
+    // this.hitokoto();
     const hr = document.querySelector('#hr');
     const mn = document.querySelector('#mn');
     const sc = document.querySelector('#sc');
     const time = document.querySelector('.time');
-    setTimeout(() => {
-      const footer = document.getElementsByClassName(
-        '__dumi-default-layout-footer-meta',
-      )[0];
-      //  <a  class="beian" href="https://beian.miit.gov.cn" target="_blank">
-      //   <img width="15"  src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png"/>
-      //   <span>&nbsp; 豫ICP备2022007076号</span>
-      //  </a>
-      footer.innerHTML = '';
-    }, 0);
 
     setInterval(() => {
       let day = new Date();
@@ -152,9 +145,9 @@ export default class Home extends React.Component {
         </h4>
         <h4 style={divStyle}>- 柏拉图</h4>
         <br />
-        <h4>{this.state.hitokoto.hitokoto}</h4>
+        {/* <h4>{this.state.hitokoto.hitokoto}</h4> */}
 
-        <div style={beianStyle}>
+        {/* <div style={beianStyle}>
           <a
             style={beianStyle}
             href="https://beian.miit.gov.cn/"
@@ -165,7 +158,7 @@ export default class Home extends React.Component {
           <a href="https://beian.miit.gov.cn/" target="_blank">
             豫ICP备2022007076号
           </a>
-        </div>
+        </div> */}
       </div>
     );
   }

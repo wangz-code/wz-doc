@@ -1,12 +1,10 @@
 ---
 title: 努努影院
 ---
+
 ```tsx
 import React from 'react';
-import { NuNu } from 'dumi-template';
-
-
-
+import { NuNu } from 'wz-doc';
 
 export default () => <NuNu title="First Demo" />;
 ```

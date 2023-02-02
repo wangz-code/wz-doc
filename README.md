@@ -1,38 +1,40 @@
-## 🏡 首页预览
+# wz-doc
 
-![](https://raw.githubusercontent.com/WangSunio/img/main/images/123.png)
+[![NPM version](https://img.shields.io/npm/v/wz-doc.svg?style=flat)](https://npmjs.org/package/wz-doc)
+[![NPM downloads](http://img.shields.io/npm/dm/wz-doc.svg?style=flat)](https://npmjs.org/package/wz-doc)
 
-## ✨ 模板驱动
+A react library developed with dumi
 
-https://umijs.github.io/dumi-template/
+## Usage
 
-## 📒 目录介绍
+TODO
 
+## Options
+
+TODO
+
+## Development
+
+```bash
+# install dependencies
+$ yarn install
+
+# develop library by docs demo
+$ yarn start
+
+# build library source code
+$ yarn run build
+
+# build library source code in watch mode
+$ yarn run build:watch
+
+# build docs
+$ yarn run docs:build
+
+# check your project for potential problems
+$ yarn run doctor
 ```
-├── docs                   Component documentation
-│   ├── index.md           Home page
-│   └── **.**              Site Directory Document
-├── src                    Component home directory
-│   ├── index.ts           Component registration
-│   └── Foo                Component development
-├── .eslintrc.js           eslint config
-├── .fatherrc.ts           father config
-├── .umirc.ts              dumi config
-└── tsconfig.json          typescript config
-```
 
-The rest of the documents can be consulted by yourself.
+## LICENSE
 
-## 🤖 命令
-
-| Name                    | Description               | Remarks                                                                                                            |
-| ----------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `npm run dev`         | Project begining          | Document usage [dumi](https://github.com/umijs/dumi), component development and documentation development together |
-| `npm run test`          | Component test            | -                                                                                                                  |
-| `npm run test:coverage` | Code coverage review      | -                                                                                                                  |
-| `npm run prettier`      | Code prettier             | -                                                                                                                  |
-| `npm run build`         | Component packaging       | Use [father](https://github.com/umijs/father)                                                                      |
-| `npm run release`       | Component package release | -                                                                                                                  |
-| `npm run docs:build`    | Document packaging        | -                                                                                                                  |
-| `npm run docs:deploy`   | Document release          | The default is to use GitHub Pages                                                                                 |
-| `npm run deploy`        | Document package release  | -                                                                                                                  |
+MIT

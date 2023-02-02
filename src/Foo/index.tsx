@@ -1,3 +1,5 @@
-import React from 'react';
+import React, { type FC } from 'react';
 
-export default ({ title }: { title: string }) => <h1>{title}</h1>;
+const Foo: FC<{ title: string }> = (props) => <h4>{props.title}</h4>;
+
+export default Foo;
