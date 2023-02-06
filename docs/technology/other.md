@@ -8,6 +8,7 @@ title: 其他
 - 搜狗输入法 v6.6.0.13588
 - python版本 Python 3.8.9
 
+
 之前用的输入法一直用搜狗, 最近切换到了 [鼠须管](https://github.com/rime/squirrel) , 想把搜狗的词库给 "鼠须管" 
 无奈搜狗导出的备份词库是加密后的bin文件
 
@@ -23,4 +24,5 @@ title: 其他
 
 在目录中找到 `luna_pinyin.extended.dict.yaml` 文件, 找到 `import_tables` 下增加一行 `- luna_pinyin.sougou`  
 保存之后执行下 `重新部署` 欢快的使用吧! 
+
 
