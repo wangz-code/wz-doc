@@ -1,21 +1,22 @@
 /*
  * @Author: wangqz
  * @Date: 2022-08-17
- * @LastEditTime: 2023-02-02
+ * @LastEditTime: 2023-02-06
  * @Description: content
  */
 import React from 'react';
 import './index.css';
-
 const topStyle = {
   marginTop: '10vh',
   color: '#787b80',
   fontWeight: '400',
+  fontSize: '17px',
 };
 const divStyle = {
   textAlign: 'right',
   color: '#787b80',
   height: 'calc(100vh - 58vh - 340px)',
+  fontSize: '17px',
 };
 
 const beianStyle = {
@@ -77,7 +78,7 @@ export default class Home extends React.Component {
 
     setInterval(() => {
       let day = new Date();
-      let hour = day.getHours() + 9;
+      let hour = day.getHours();
       let min = day.getMinutes();
       let sec = day.getSeconds();
 

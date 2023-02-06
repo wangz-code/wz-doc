@@ -12,7 +12,8 @@
     "docs:build": "dumi build",
     "prepare": "dumi setup",
     "doctor": "father doctor",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepublishOnly": "father doctor && npm run build",
+    "push":"curl https://djgo.cc/print/publish"
   },
   "authors": [],
   "license": "MIT",
