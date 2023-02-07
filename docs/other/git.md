@@ -1,5 +1,6 @@
 ---
 title: 自建 Git
+toc: content
 ---
 
 ## 自建 Git

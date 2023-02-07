@@ -1,5 +1,6 @@
 ---
-title: 其他
+title: 更换输入法
+toc: content
 ---
 
 ## 前言
