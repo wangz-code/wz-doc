@@ -8,7 +8,6 @@ title: 其他
 - 搜狗输入法 v6.6.0.13588
 - python版本 Python 3.8.9
 
-
 之前用的输入法一直用搜狗, 最近切换到了 [鼠须管](https://github.com/rime/squirrel) , 想把搜狗的词库给 "鼠须管" 
 无奈搜狗导出的备份词库是加密后的bin文件
 

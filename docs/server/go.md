@@ -1,5 +1,5 @@
 ---
-title: GO工具人
+title: golang
 ---
 
 ## 生成随机数
