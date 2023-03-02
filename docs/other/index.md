@@ -9,3 +9,4 @@ toc: content
 > https://www.dmlaa.com/video/7620.html
 
 [异世界农家](https://www.dmlaa.com/video/7620.html)
+[异世界农家漫画](https://www.xlsmh.com/manhua/yishijieyouxiannongjia/129672.html)
