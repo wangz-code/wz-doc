@@ -1,20 +1,15 @@
-<!--
- * @Author: wangqz
- * @Date: 2023-04-23
- * @LastEditTime: 2023-04-23
- * @Description: content
--->
 ---
 title: 安卓盒子视频
 toc: content
 ---
 
 ### 下载地址
+
 [TVBoxOSC](https://github.com/pvqogw/TVBoxOSC/releases)
 [down](https://djgo.cc/static/TVBox_takagen99_20230319-0039.apk)
 
-
 ### 数据源
+
 [数据源地址](https://uzbox.com/tech/tvbox-jiekou.html)
 
 ```
