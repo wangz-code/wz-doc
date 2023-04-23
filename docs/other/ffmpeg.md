@@ -3,7 +3,8 @@ title: FFmpeg
 toc: content
 ---
 
-### 个人常用youtube下载的mp4转mp3
+### 个人常用 youtube 下载的 mp4 转 mp3
+
 ```shell
 
 # 剪切视频
@@ -14,10 +15,23 @@ ffmpeg -i cut.mp4 -vn audio.mp3
 # 视频转Gif
 ffmpeg -i test.mp4 test.gif
 
+# 从视频中第3秒开始，截取时长为3秒的片段转化为 gif
+ffmpeg -t 3 -ss 00:00:03 -i test.mp4 test-clip.gif
+
+# 默认转化是中等质量模式，若要转化出高质量的 gif，可以修改比特率
+ffmpeg -i test.mp4 -b 2048k test.gif
+
+# 将GIF 转换为 MP4
+ffmpeg -f gif -i test.gif test.mp4
+
+# 移除视频中的音频（静音） -an 就是禁止音频输出
+ffmpeg -i input.mov -an mute-output.mov
+
+# 视频提取帧 将视频提取10帧
+ffmpeg -i index.mp4 -r 10 %03d.jpg;
 ```
 
-
-### ffmpeg音频mp4 转 mp3
+### ffmpeg 音频 mp4 转 mp3
 
 ```shell
 
@@ -27,7 +41,8 @@ ffmpeg -i filename.mp4 filename.mp3
 ffmpeg -i video.mp4 -vn audio.mp3
 
 ```
-### ffmpeg剪切视频文件命令 [参考](https://moejj.com/ffmpeg)
+
+### ffmpeg 剪切视频文件命令 [参考](https://moejj.com/ffmpeg)
 
 ```shell
 
@@ -51,4 +66,3 @@ ffmpeg -ss 00:03:00 -i video.mp4 -c copy cut.mp4
 
 
 ```
-
