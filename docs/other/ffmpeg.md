@@ -11,6 +11,8 @@ ffmpeg -ss 00:00:00 -i video.mp4 -to 00:02:00 -c copy cut.mp4
 
 # 转换
 ffmpeg -i cut.mp4 -vn audio.mp3
+# 视频转Gif
+ffmpeg -i test.mp4 test.gif
 
 ```
 
