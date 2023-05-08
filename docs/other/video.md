@@ -6,7 +6,6 @@ toc: content
 ### 下载地址
 
 [TVBoxOSC](https://github.com/pvqogw/TVBoxOSC/releases)
-[down](https://djgo.cc/static/TVBox_takagen99_20230319-0039.apk)
 
 ### 数据源
 
