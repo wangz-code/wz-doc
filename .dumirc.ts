@@ -5,7 +5,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/images/logo.png',
     name: 'wz-doc',
-    footer: '<a href="https://beian.miit.gov.cn" target="_blank">豫ICP备2022007076号</a>  <a href="https://beian.miit.gov.cn">豫ICP备2022007076号-1</a>',
+    footer: '<a style="margin-right:10px" href="https://beian.miit.gov.cn" target="_blank">豫ICP备2022007076号</a>  <a style="margin-right:10px" href="https://beian.miit.gov.cn">豫ICP备2022007076号-1</a> <a href="/other/disclaimer">免责声明</a>   ',
     socialLinks: {
       github: 'https://github.com/wangz-code',
     },
