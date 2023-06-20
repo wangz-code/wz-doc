@@ -18,7 +18,8 @@ toc: content
 
 原作的代码输出的字典于鼠须管内其他的字典有些许出入, 只需要修改两行就能输出鼠须管格式相同的字典
 
-参见 [修改代码](https://github.com/wangz-code/Sogou-User-Dict-Converter/commit/aee2f17f98f183840fb21d45ade85d9638c3937f)
+参见
+[![pCSHJET.png](https://s1.ax1x.com/2023/06/02/pCSHJET.png)](https://imgse.com/i/pCSHJET)
 
 转换完毕之后复制内容粘贴到 xxx.yaml 文件中 比如我的就叫做 `luna_pinyin.sougou.dict.yaml`, 丢到鼠须管 `用户设定` 目录下
 
