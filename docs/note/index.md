@@ -19,8 +19,9 @@ toc: content
 
 
 
-# 操作
+# 问题解决
 - 精粤主板需要进入bios 中配置内存的倍频 才能运行在3200HZ(默认是2666) 
+- address 在win下不能填写iP, 填写域名一切就能正常了,router内也能通过域名进行分流了
 - 40hx 绘画需要增加 ``` --no-half --precision full ``` 启动参数, 方能正常使用GPU
 
 
