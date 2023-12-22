@@ -1,6 +1,5 @@
 ---
-nav: 前端
-toc: context
+title: 小程序 NFC 通讯
 ---
 
 # 小程序 NFC 通讯

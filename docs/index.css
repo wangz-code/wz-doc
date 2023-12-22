@@ -47,7 +47,6 @@
   width: 15px;
   background: #fff;
   border-radius: 50%;
-  z-index: 100000;
 }
 
 #clockbody.light .clock::before {
@@ -132,7 +131,6 @@
 .clock .min,
 .clock .sec {
   position: absolute;
-  z-index: 10;
 }
 
 .hour,

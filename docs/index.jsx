@@ -1,7 +1,7 @@
 /*
  * @Author: wangqz
  * @Date: 2022-08-17
- * @LastEditTime: 2023-02-06
+ * @LastEditTime: 2023-12-20
  * @Description: content
  */
 import React from 'react';
@@ -146,20 +146,6 @@ export default class Home extends React.Component {
         </h4>
         <h4 style={divStyle}>- 柏拉图</h4>
         <br />
-        {/* <h4>{this.state.hitokoto.hitokoto}</h4> */}
-
-        {/* <div style={beianStyle}>
-          <a
-            style={beianStyle}
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-          >
-            豫ICP备2022007076号-1
-          </a>
-          <a href="https://beian.miit.gov.cn/" target="_blank">
-            豫ICP备2022007076号
-          </a>
-        </div> */}
       </div>
     );
   }

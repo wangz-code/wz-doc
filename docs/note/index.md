@@ -1,37 +1,30 @@
 ---
-nav: 折腾日记
+nav:
+  title: 折腾日记
+  order: 4
+title: 简介
 toc: content
+description: 生命在于折腾
+keywords:
+  [
+    '折腾日记',
+    '40hx显卡',
+    'stable-diffusion绘图',
+    'Openwrt',
+    '小米路由器',
+    '精简xray-core',
+    'torch',
+  ]
 ---
 
-# 装机
-最近搞了一张 CMP 40HX显卡, 纯纯的大矿卡, 收到货之后看了下还挺新, 看评测说好像介于 2060 和 2060S 之间,  
-370的价格拼多多购入
-到家后立马就安排了一波清灰, 贴上了9块9 买的霍尼韦尔相变片
-中间虽然有点困难,万幸都已经解决了; 
+### 简介
 
+最近整了很多东西, 总是一环套一环的 
+比如 
+- 树莓派小车
+- 小米4A千兆版本路由器刷 Openwrt
+- 然后给台式机刷了个Ubuntu, 远程唤醒乌班图(wol)
+- 然后把之前吃灰的手机(zuk z2pro)修理了一下
 
-
-# 问题
-- 精粤B760M snow dream 内存频率的问题, 听说精粤主板对金百达长鑫颗粒兼容问题, 我误打误撞没遇到
-- win下 xray代理工具不能获取域名仅能读到IP (这个问题截止目前没找到解决办法)
-- 40hx 驱动问题, 这个屌卡没有显示输出接口,听说是在核心上被砍了, 其次是半精度被砍了(绘画会用到)
-
-
-
-
-# 问题解决
-- 精粤主板需要进入bios 中配置内存的倍频 才能运行在3200HZ(默认是2666) 
-- address 在win下不能填写iP, 填写域名一切就能正常了,router内也能通过域名进行分流了
-- 40hx 绘画需要增加 ``` --no-half --precision full ``` 启动参数, 方能正常使用GPU
-
-
-# 总结
-- 感谢P106吧内 无悔大佬的最新[魔改驱动](https://www.aliyundrive.com/s/LXKQfxTX4Ra/folder/617e7c79610c9bf9b78a4072952e02fb3289ce4e)
-- 研究了 stable-diffusion 使用40hx绘图, 感谢 [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui/pull/12710) 作者给予的帮助
-
-
-
-
-画出来的一些小护士 https://www.zhihu.com/column/c_1677056298045358080
-
-<img src="/images/40hx.jpg" style="transform: rotate(-90deg);width:200px;margin-left:120px">
+然后由此了解`torch` `yolo检测`,`supervision` 这些东西 后面还跑了 `phi-2` 微软的大语言模型, 号称性能很吊
+但是测试过后感觉一般, 中文支持及其差就是乱讲, 英文倒是可以识别, 在我的M1上面跑大概20秒左右才能回答一个问题 🤕

@@ -1,16 +1,12 @@
 {
   "compilerOptions": {
     "strict": true,
-    "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "@@/*": [".dumi/tmp/*"],
-      "wz-doc": ["src"],
-      "wz-doc/*": ["src/*", "*"]
+      "@@/*": [".dumi/tmp/*"]
     }
   },
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
+  "include": [".dumirc.ts"]
 }
