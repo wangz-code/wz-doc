@@ -49,6 +49,7 @@ mtd -e OS1 -r write openwrt-21.02.3-ramips-mt7621-xiaomi_mi-router-4a-gigabit-sq
   写个程序运行在路由器上面, 设置开机启动, 每间隔 5 分钟检查一次, 如果不同则调用解析接口更新下域名解析, (腾讯云买的域名是支持的)
 
 - 访问家里的设备
+
   通过端口转发, 比如 192.168.1.1:22 是树莓派, 然后可以绑定公网 domain.com:2222 通过路由器转发到 192.168.1.1:22 就能直接访问家里的设备了, 设备记得开启防火墙,密码设置难破解一些, openwrt 防火墙转发那里配置好一些安全限制, 避免被攻击
 
 ### 运行 xray
@@ -59,4 +60,4 @@ mtd -e OS1 -r write openwrt-21.02.3-ramips-mt7621-xiaomi_mi-router-4a-gigabit-sq
 
 - [精简 xray-core](https://github.com/wangz-code/xray-core-min) 根据官方的 1.8.4 版本 把能删的都删了就保留基本功能 在 op 下使用 `ls -lh` 查看仅有 4.2M, 这个是 upx 之后的
 
-之后在手机上wifi内直接配置手动代理,填上路由器的地址和 xray 对应的端口号就能访问油管了
+之后在手机上 wifi 内直接配置手动代理,填上路由器的地址和 xray 对应的端口号就能访问油管了
