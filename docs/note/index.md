@@ -2,9 +2,9 @@
 nav:
   title: 折腾日记
   order: 4
-title: 简介
 toc: content
 description: 生命在于折腾
+title: 折腾日记
 keywords:
   [
     '折腾日记',
@@ -17,7 +17,7 @@ keywords:
   ]
 ---
 
-### 简介
+### 折腾日记
 
 最近整了很多东西, 总是一环套一环的 
 比如 

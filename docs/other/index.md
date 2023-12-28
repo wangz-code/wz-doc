@@ -3,11 +3,12 @@ nav:
   title: 其他
   order: 3
 toc: content
+title: 其他
 description: 一些杂乱的东西
 keywords: ["其他"]
 ---
 
-# 介绍
+### 其他
 
 这里主要存放一些不知道放在那里的东西
 
