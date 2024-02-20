@@ -13,24 +13,12 @@ toc: 使用心得
 ![alt 属性文本](/images/xray-router.png)
 
 ### 准备工作
-
+- mac下
 - 下载 [xray-core 1.75](https://github.com/XTLS/Xray-core/releases/tag/v1.7.5) 目前稳定版就是1.75
 - 准备 [config.json ](https://xtls.github.io/document/level-0/ch08-xray-clients.html#_8-3-%E9%99%84%E5%8A%A0%E9%A2%98-1-%E5%9C%A8-pc-%E7%AB%AF%E6%89%8B%E5%B7%A5%E9%85%8D%E7%BD%AE-xray-core) 记得删除注释内容
-- 启动脚本 shell
-``` shell
-# 10801 是config.json中配置的,  不知道为什么 10800 即使没有监听也会有数据会判断不准确, 所以监听 10801
-lsof -i:10801 > /dev/null
-#  [ $? -ne 0 ] =  上一条命令执行失败
-#  ohup xray >/dev/null 2>&1 & 这样写可以免去回车操作
-if [ $? -ne 0 ];then nohup xray >/dev/null 2>&1 &; fi
 
-# 下面个指令是结束 xray的进程, 非常好用
-# killall xray
-
-```
 
 ### 操作步骤
-- 添加启动脚本到 登录项 位于  "系统偏好设置" => "登录项" 添加 xxx.sh 勾选隐藏
 - 为了方便操作我把xray所在的目录添加到了 path中, 不添加也可以但是需要绝对路径运行
 ```shell
 # 编辑终端文件
@@ -43,6 +31,9 @@ vim ~/.zshrc
 # 根据程序名杀死进程 比如: killall xray  回车
 export PATH=$PATH:/Users/wz/Proxy/xray-core
 
+# 重启xray 相当于重新加载confdir内配置内容
+alias rexray='killall xray; sleep 2s; nohup xray run -confdir confs >/dev/null 2>&1 &;'
+
 # 让终端走代理  10801 是config.json中配置的
 alias proxy='export http_proxy="http://127.0.0.1:10801"; export HTTP_PROXY="http://127.0.0.1:10801"; export https_proxy="http://127.0.0.1:10801"; export HTTPS_PROXY="http://127.0.0.1:10801"'
 
@@ -52,6 +43,10 @@ alias p=proxy
 # 后台运行指令:  nohup xray &   注意 `&` 符号一定不能忘记
 
 ```
+- 然后在本机的  wifi  ===> 详细信息 ===> 代理 ===> 网页代理&网页安全代理 
+`根据自己的配置内容进行填写 比如我的就是:`
+服务器:127.0.0.1
+端口: 10801
 
 ### 后续遇到没有代理的网站可以直接修改 [config.json](https://xtls.github.io/document/level-0/ch08-xray-clients.html#_8-3-%E9%99%84%E5%8A%A0%E9%A2%98-1-%E5%9C%A8-pc-%E7%AB%AF%E6%89%8B%E5%B7%A5%E9%85%8D%E7%BD%AE-xray-core)
 ```json
@@ -59,43 +54,79 @@ alias p=proxy
 domain 这是一个字符串数组, 例如 "domain":["www.baidu.com","zhihu.com"] 就会让百度和知乎走代理了, 其他的配置同理
 ...
 "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      // 3.1 广告域名屏蔽
-      {
-        "type": "field",
-        "domain": ["geosite:category-ads-all"],
-        "outboundTag": "block"
-      },
-      // 3.2 国内域名直连
-      {
-        "type": "field",
-        "domain": ["geosite:cn"],
-        "outboundTag": "direct"
-      },
-      // 3.3 国内IP直连
-      {
-        "type": "field",
-        "ip": ["geoip:cn", "geoip:private"],
-        "outboundTag": "direct"
-      },
-      // 3.4 国外域名代理
-      {
-        "type": "field",
-        "domain": ["geosite:geolocation-!cn"],
-        "outboundTag": "proxy"
-      },
-      // 3.5 默认规则
-      // 在Xray中，任何不符合上述路由规则的流量，都会默认使用【第一个outbound（5.1）】的设置，所以一定要把转发VPS的outbound放第一个
-      // 3.6 走国内"223.5.5.5"的DNS查询流量分流走direct出站
-      {
-        "type": "field",
-        "ip": ["223.5.5.5"],
-        "outboundTag": "direct"
-      }
-    ]
-  },
-  ...
+        "domainMatcher": "hybrid",
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "domain": [
+                    "domain:google.com",
+                    "domain:youtube.com",
+                    "regexp:\\.goo.*\\.com$",
+                    "*.googlevideo.com",
+                    "domain:google.com.hk",
+                    "domain:googleapis.com",
+                    "domain:gstatic.com",
+                    "domain:ggpht.com",
+                    "domain:ytimg.com",
+                    "domain:googleusercontent.com",
+                    "domain:twimg.com",
+                    "domain:npmjs.com",
+                    "domain:twitter.com",
+                    "domain:soundcloud.com",
+                    "domain:sndcdn.com",
+                    "domain:googletagmanager.com",
+                    "domain:appspot.com",
+                    "domain:wikipedia.org",
+                    "domain:codesandbox.io",
+                    "domain:unpkg.com",
+                    "domain:apache.org",
+                    "domain:jsdelivr.net",
+                    "domain:cloudflareinsights.com",
+                    "domain:visualstudio.com",
+                    "domain:csb.app",
+                    "domain:instagram.com",
+                    "domain:cdninstagram.com",
+                    "domain:fbcdn.net",
+                    "domain:pinterest.com",
+                    "domain:pinterest.fr",
+                    "domain:babylonjs-playground.com",
+                    "domain:githack.com",
+                    "domain:speedtest.net",
+                    "domain:openwrt.org",
+                    "domain:nuxt.com",
+                    "domain:duckduckgo.com",
+                    "domain:npmmirror.com",
+                    "domain:v2ex.com",
+                    "domain:feel-gpt.top",
+                    "domain:huggingface.co",
+                    "domain:theb.ai",
+                    "domain:mercari.com",
+                    "domain:pcwrap.com",
+                    "beta.theb.ai",
+                    "domain:binance.com",
+                    "domain:bnbstatic.com",
+                    "domain:deepswap.ai",
+                    "regexp:eacg",
+                    "regexp:telegram",
+                    "regexp:mercdn",
+                    "regexp:github",
+                ],
+                "outboundTag": "proxyvps",
+                "type": "field"
+            },
+            {
+                "domain": [
+                    "domain:djgo.cc",
+                    "regexp:\\*baidu\\$",
+                    "regexp:360buyimg",
+                    "regexp:jd"
+                ],
+                "outboundTag": "direct",
+                "type": "field"
+            }
+        ]
+    }
+...
 
 ```
 
