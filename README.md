@@ -1,38 +1,32 @@
 # wz-doc
 
-[![NPM version](https://img.shields.io/npm/v/wz-doc.svg?style=flat)](https://npmjs.org/package/wz-doc)
-[![NPM downloads](http://img.shields.io/npm/dm/wz-doc.svg?style=flat)](https://npmjs.org/package/wz-doc)
+基于dumi 的博客 配置内开启了 SSR
+## 版本信息
 
-A react library developed with dumi
+这是一个示例 [DEMO](https://djgo.cc/)。
 
-## Usage
+![图片](https://github.com/WangSunio/img/blob/main/images/blog-demo.png?raw=true)
 
-TODO
+```bash
+dumi v2.1.24
+umi@4.0.68
 
-## Options
 
-TODO
+```
 
-## Development
+
+## 开发
 
 ```bash
 # install dependencies
-$ yarn install
+$ npm install
 
-# develop library by docs demo
-$ yarn start
+# 开发
+$ npm run dev
 
-# build library source code
-$ yarn run build
+# 打包
+$ npm run build
 
-# build library source code in watch mode
-$ yarn run build:watch
-
-# build docs
-$ yarn run docs:build
-
-# check your project for potential problems
-$ yarn run doctor
 ```
 
 ## LICENSE
