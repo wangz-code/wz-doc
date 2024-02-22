@@ -27,6 +27,13 @@ $ npm run dev
 # 打包
 $ npm run build
 
+
+# 部署
+nohup node ./wzdoc.js &
+
+# bun部署
+bun run wzdoc.js 
+
 ```
 
 ## LICENSE
