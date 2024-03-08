@@ -69,7 +69,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@163.com"
 # 2.然后把生成的 id_rsa.pub 里的内容 copy 到 authorized_keys 中 应该是一行一个
 
 authorized_keys:
-第一行: 放本机生成的 id_rsa.pub
+第一行: 放其他需要免密登录的 id_rsa.pub
 第二行: 放其他需要免密登录的 id_rsa.pub
 第三行: 放其他需要免密登录的 id_rsa.pub
 ......
