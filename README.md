@@ -30,10 +30,12 @@ $ npm run build
 
 # 部署
 nohup node ./wzdoc.js &
-
 # bun部署
 bun run wzdoc.js 
 
+# pm2 部署(守护进程,自动重启) node 和bun 总是三天两头挂逼
+npm install pm2 -g
+pm2 start wzdoc.js
 ```
 
 ## LICENSE
