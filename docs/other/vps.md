@@ -69,7 +69,7 @@ AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
 
 
 
-# 生成本机密钥
+# 生成本机密钥, 如果已经生成过,生成密钥可以省略
 ssh-keygen -t rsa -b 4096 -C "xxx@qq.com"
 # 然后在 粘贴 其他机器的 公钥(id_rsa.pub) 一行一个
 sudo vim ~/.ssh/authorized_keys
@@ -84,6 +84,8 @@ sudo vim /etc/ssh/sshd_config
 # 找到最后一行把 yes 修改为 no
 PasswordAuthentication no
 
+
+# 安装 ufw 开启白名单, 或者找到badip 集合全部加到拦截列表里
 
 5. 安装 BBRplus新版内核
 19.使用BBRplus+FQ版加速
