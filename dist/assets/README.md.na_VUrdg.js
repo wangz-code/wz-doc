@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s,j as a}from"./chunks/framework.DrxArEOS.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),o={name:"README.md"},r=a("p",null,"VitePress",-1),n=[r];function c(_,d,i,p,l,m){return s(),t("div",null,n)}const h=e(o,[["render",c]]);export{f as __pageData,h as default};
