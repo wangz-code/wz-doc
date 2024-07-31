@@ -1,6 +1,6 @@
 ---
 title: 免责声明
-toc: content
+description: 免责声明
 ---
 
 免责声明

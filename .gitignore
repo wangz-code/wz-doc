@@ -1,10 +1,4 @@
+.vitepress
 node_modules
-/dist
-/server
-.dumi/tmp
-.dumi/tmp-test
-.dumi/tmp-production
+package-lock.json
 .DS_Store
-/docs-dist
-*.sh
-*.tar.gz

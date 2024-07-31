@@ -1,9 +1,10 @@
 ---
 title: 远程开机Ubuntu
-toc: content
-order: 3
 description: 使用wol或etherwake远程唤醒Ubuntu
-keywords: ['远程唤醒Ubuntu', '远程开机', 'wol', 'etherwake', '网卡唤醒']
+head:
+    - - meta
+      - name: keywords
+        content: 远程唤醒Ubuntu 远程开机 wol etherwake 网卡唤醒
 ---
 
 ### Ubuntu 远程唤醒

@@ -1,10 +1,10 @@
 ---
 title: 手机直供电
-toc: content
-order: 3
 description: 联想zuk手机焊接直供电,手机电池排线损坏解决方案飞线
-keywords:
-  ['手机', '直供电', '无需电池', '电池排线损坏', '电池均衡', 'zuk z2pro']
+head:
+    - - meta
+      - name: keywords
+        content: 手机 直供电 无需电池 电池排线损坏 电池均衡
 ---
 
 ### 缘起

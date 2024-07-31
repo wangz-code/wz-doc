@@ -1,43 +1,35 @@
 ---
 title: 树莓派小车
-toc: content
-order: 2
-description: 树莓派小车socket控制机械臂opencv识别
-keywords: ['树莓派小车', 'socket控制机械臂', 'opencv识别']
+description: 小树莓派小车socket控制机械臂opencv识别
+head:
+    - - meta
+      - name: keywords
+        content: 树莓派小车 socket控制机械臂 opencv识别
 ---
-
-### 缘起
-
-~ 从同事那里白嫖了一个树莓派, 装上 Ubuntu 简单跑了一下感觉还不错, 可惜是百兆网口, 我 300M 的宽带跑不满太浪费了, 不然用来跑 xray 相当不错
-当然! 跑了几天 xray 才觉得不妥, 然后就在阿里巴巴上买了一点配件,车和机械臂还有一些其他的传感器,直接组装了一个车
 
 ### 演示视频
 
-<code inline > 
-    <video src="/video/picar.mp4"  controls="" preload="none" poster="封面" style="width: 60%;">
-    </videos>
-</code>
+<video src="/video/picar.mp4"  controls="" preload="none" style="width: 60%;"/>
 
 ### 准备工作
 
 > 可以直接在阿里巴巴上搜索店铺: [明佳泰](https://mingjiataidz.1688.com/page/index.html) 一站购齐
 
-- 车身: `亚克力底盘` `轮胎` `电机` `电池` `电池盒` `充电电池盒`
-- 控制: `L298N电机驱动板子` `PWM舵机驱动板PCA9685`
-- 其他: `机械臂` `升压模块` `降压模块` `超声波传感器` `csi摄像头` `舵机(MG90的要好一点)` `开关` `杜邦线` `3mm铜线` `串联充电均衡板`
+-   车身: `亚克力底盘` `轮胎` `电机` `电池` `电池盒` `充电电池盒`
+-   控制: `L298N电机驱动板子` `PWM舵机驱动板PCA9685`
+-   其他: `机械臂` `升压模块` `降压模块` `超声波传感器` `csi摄像头` `舵机(MG90的要好一点)` `开关` `杜邦线` `3mm铜线` `串联充电均衡板`
 
 ### 基本思路
 
-~ 主要是 Python 我是采用 websocket 控制, 不需要额外的遥控器, 是个手机就能用, 这样做弊端就是离开 wifi 就用不了但是后续实时视频集成比较方便
-总的来说有利有弊
+~ 主要是 Python 我是采用 websocket 控制, 不需要额外的遥控器, 是个手机就能用, 这样做弊端就是离开 wifi 就用不了但是后续实时视频集成比较方便总的来说有利有弊
 
 ### 参考资料
 
-- 安装 python
-- 安装 [jupyter](https://jupyter.org/install) 直接在网页编写代码实时调试很方便
-- 控制电机 [参考](https://blog.csdn.net/weixin_43073852/article/details/83085306)
-- 控制超声波 [参考](https://blog.csdn.net/hnmpf/article/details/110312551)
-- 控制机械臂 [参考](https://blog.csdn.net/vonct/article/details/120808529)
+-   安装 python
+-   安装 [jupyter](https://jupyter.org/install) 直接在网页编写代码实时调试很方便
+-   控制电机 [参考](https://blog.csdn.net/weixin_43073852/article/details/83085306)
+-   控制超声波 [参考](https://blog.csdn.net/hnmpf/article/details/110312551)
+-   控制机械臂 [参考](https://blog.csdn.net/vonct/article/details/120808529)
 
 ### 相关代码
 
@@ -561,3 +553,9 @@ def start_websocket_server():
 # 启动WebSocket服务器
 start_websocket_server()
 ```
+
+<script setup>
+import { ref } from 'vue'
+
+const count = ref(0)
+</script>

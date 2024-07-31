@@ -62,3 +62,40 @@ server {
 
 
 ```
+
+### nginx 自启动 CentOS7.x&RedHat7.x 配置 Nginx 开机自启动`
+
+```sh
+
+vim /lib/systemd/system/nginx.service
+
+#内容如下
+[Unit]
+Description=nginx service
+After=network.target
+[Service]
+Type=forking
+ExecStart=/usr/nginx/sbin/nginx
+ExecReload=/usr/nginx/sbin/nginx -s reload
+ExecStop=/usr/nginx/sbin/nginx -s quit
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
+
+
+# 授权
+chmod a+x /lib/systemd/system/nginx.service
+
+
+#命令
+systemctl enable nginx.service          #设置开机自启动
+systemctl disable nginx.service         #停止开机自启动
+systemctl start nginx.service　         #启动 Nginx 服务
+systemctl stop nginx.service　          #停止服务
+systemctl status nginx.service          #查看服务当前状态
+systemctl list-units --type=service     #查看所有已启动的服务
+
+
+# 如果已经手工启动需要 kill之后 再使用 systemctl 启动
+
+```

@@ -1,9 +1,10 @@
 ---
 title: 山地车
-toc: content
-order: 3
-description: 山地车改装
-keywords: ['26寸', '山地车', '旋飞改装卡飞', '26寸自编轮组', '改装碟刹']
+description: Openwrt安全相关,配置防火墙,密钥登录,端口转发,动态IP和DDNS
+head:
+  - - meta
+    - name: keywords
+      content: 26寸 山地车 旋飞改装卡飞 26寸自编轮组 改装碟刹
 ---
 
 ### 缘起

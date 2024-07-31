@@ -1,9 +1,10 @@
 ---
-title: 路由器刷机
-toc: content
-order: 4
+title: 小米4A路由器(千兆版)刷机
 description: 小米4A路由器(千兆版V1)刷openwrt,动态IP公网访问
-keywords: ['刷openwrt', '小米4A路由器刷机', '千兆版', 'DDNS', '动态IP']
+head:
+  - - meta
+    - name: keywords
+      content: 刷openwrt 小米4A路由器刷机 千兆版 DDNS 动态IP
 ---
 
 ### 缘起
