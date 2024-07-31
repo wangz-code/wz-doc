@@ -1,20 +1,15 @@
 import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
-
-
-const year = new Date().getFullYear()
 export default defineConfig({
 	title: "This dream",
 	description: "i love dream",
 	sitemap: {
 		hostname: "https://www.678998.xyz",
 	},
+	outDir: './dist',
 	themeConfig: {
-		footer: {
-			message:  '<a style="margin-right:10px" href="https://beian.miit.gov.cn" target="_blank">豫ICP备2022007076号</a>  <a style="margin-right:10px" href="https://beian.miit.gov.cn">豫ICP备2022007076号-1</a> <a href="/docs/other/disclaimer">免责声明</a>',
-			copyright: `Copyright © ${year}-present Evan You`,
-		},
+		footer: { message: `<a style="margin-right:10px" href="https://beian.miit.gov.cn" target="_blank">豫ICP备2022007076号</a>  <a style="margin-right:10px" href="https://beian.miit.gov.cn">豫ICP备2022007076号-1</a> <a href="/docs/other/disclaimer">免责声明</a>`, copyright: `Copyright © ${new Date().getFullYear()}-present Evan You` },
 		logo: "/logo.jpg",
 		nav: [
 			{ text: "首页", link: "/" },
