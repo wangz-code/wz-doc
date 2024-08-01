@@ -1,0 +1,29 @@
+import{_ as s,c as n,o as a,a2 as t}from"./chunks/framework.DrxArEOS.js";const b=JSON.parse('{"title":"安卓盒子视频","description":"安卓盒子视频","frontmatter":{"title":"安卓盒子视频","description":"安卓盒子视频","head":[["meta",{"name":"keywords","content":"安卓 盒子 视频"}]]},"headers":[],"relativePath":"docs/other/video.md","filePath":"docs/other/video.md"}'),p={name:"docs/other/video.md"},e=t(`<h3 id="下载地址" tabindex="-1">下载地址 <a class="header-anchor" href="#下载地址" aria-label="Permalink to &quot;下载地址&quot;">​</a></h3><p><a href="https://github.com/pvqogw/TVBoxOSC/releases" target="_blank" rel="noreferrer">TVBoxOSC</a></p><h3 id="数据源" tabindex="-1">数据源 <a class="header-anchor" href="#数据源" aria-label="Permalink to &quot;数据源&quot;">​</a></h3><p>2哈社区 <code>https://tv.5ye.cc</code> 云星接口 <code>https://maoyingshi.cc/tvbox/云星日记/1.m3u8</code> 肥猫接口 <code>http://我不是.肥猫.love:63/接口禁止贩卖</code></p><p><a href="https://uzbox.com/tech/tvbox-jiekou.html" target="_blank" rel="noreferrer">数据源地址</a></p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>https://raw.liucn.cc/box/m.json（推荐）</span></span>
+<span class="line"><span>https://raw.liucn.cc/box/xiaopingguo.json（推荐）</span></span>
+<span class="line"><span>https://agit.ai/liucn/box/raw/branch/main/m.json</span></span>
+<span class="line"><span>https://liu673cn.github.io/box/m.json</span></span>
+<span class="line"><span>https://raw.iqiq.io/liu673cn/box/main/m.json</span></span>
+<span class="line"><span>https://raw.iqiq.io/lm317379829/PyramidStore/pyramid/py.json</span></span>
+<span class="line"><span>https://dxawi.github.io/0/0.json</span></span>
+<span class="line"><span>https://download.kstore.space/download/2863/01.txt</span></span>
+<span class="line"><span>https://ghproxy.com/https://raw.githubusercontent.com/chengxueli818913/maoTV/main/44.txt</span></span>
+<span class="line"><span>https://cdn.jsdelivr.net/gh/chengxueli818913/maoTV@main/44.txt</span></span>
+<span class="line"><span>https://freed.yuanhsing.cf/TVBox/meowcf.json</span></span>
+<span class="line"><span>https://notabug.org/imbig66/tv-spider-man/raw/master/%E9%85%8D%E7%BD%AE/0801.json</span></span>
+<span class="line"><span>https://pastebin.com/raw/gtbKvnE1（有广告）</span></span>
+<span class="line"><span>https://pastebin.com/raw/sbPpDm9G</span></span>
+<span class="line"><span>https://cdn.jsdelivr.net/gh/GaiVmao/dianshiyuan@main/yuan2.txt（有广告）</span></span>
+<span class="line"><span>https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ptest.json（部分有广告）</span></span>
+<span class="line"><span>https://ghproxy.com/https://raw.githubusercontent.com/tv-player/tvbox-line/main/tv/ikbb.json</span></span>
+<span class="line"><span>https://agit.ai/hu/hcr/raw/branch/master/MMM.txt（有广告）</span></span>
+<span class="line"><span>https://freed.yuanhsing.cf/TVBox/meowcf.json（部分有广告）</span></span>
+<span class="line"><span>https://github.com/YuanHsing/freed/raw/master/TVBox/meow.json（部分有广告）</span></span>
+<span class="line"><span>https://dxawi.github.io/0/0.json</span></span>
+<span class="line"><span>https://raw.githubusercontent.com/UndCover/PyramidStore/main/py.json</span></span>
+<span class="line"><span>https://leezn.github.io/TVBox/py.json</span></span>
+<span class="line"><span>https://leezn.github.io/TVBox/js.json</span></span>
+<span class="line"><span>http://home.jundie.top:81/top98.json</span></span>
+<span class="line"><span>http://pandown.pro/tvbox/tvbox.json</span></span>
+<span class="line"><span>https://try.gitea.io/xcxc8/mytv/raw/branch/main/TV.json</span></span>
+<span class="line"><span>https://agit.ai/hu/hcr/raw/branch/master/MMM.txt</span></span>
+<span class="line"><span>http://52bsj.vip:98/wuai</span></span></code></pre></div>`,6),o=[e];function i(c,l,r,h,d,m){return a(),n("div",null,o)}const g=s(p,[["render",i]]);export{b as __pageData,g as default};
