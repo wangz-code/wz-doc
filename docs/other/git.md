@@ -1,6 +1,10 @@
 ---
 title: 自建 Git
-toc: content
+description: 自建 Git
+head:
+  - - meta
+    - name: keywords
+      content: 自建 Git
 ---
 
 ## 自建 Git

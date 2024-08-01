@@ -1,7 +1,10 @@
 ---
 title: 蓝牙通讯
 description: 小程序蓝牙通讯
-keywords: ['webapp', '小程序', '蓝牙']
+head:
+  - - meta
+    - name: keywords
+      content: webapp 小程序 蓝牙
 ---
 
 ## 微信小程序蓝牙通讯

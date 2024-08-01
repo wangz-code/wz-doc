@@ -1,6 +1,10 @@
 ---
-title: Vps的SSH安全配置
-toc: Vps的SSH安全配置
+title: Vps的SSH
+description: Vps的SSH安全配置
+head:
+  - - meta
+    - name: keywords
+      content: vps SSH 安全 配置
 ---
 
 ### debian 为例

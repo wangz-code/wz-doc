@@ -1,6 +1,10 @@
 ---
 title: 更换输入法
-toc: content
+description: 更换输入法
+head:
+  - - meta
+    - name: keywords
+      content: 更换输入法
 ---
 
 ## 前言

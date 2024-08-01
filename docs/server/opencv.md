@@ -1,11 +1,10 @@
 ---
-nav:
-  title: Opencv
-  order: 4
 title: Opencv
-toc: content
 description: Opencv和yolo8n检测
-keywords: ['Opencv', '人体检测', 'yolo8n']
+head:
+  - - meta
+    - name: keywords
+      content: Opencv 人体检测 yolo8n
 ---
 
 ### yolo检测
