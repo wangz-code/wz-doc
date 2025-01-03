@@ -8,7 +8,7 @@ hero:
   tagline: 平时的折腾日记,ssr渲染,树莓派小车,openwrt,小程序,精简xray
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Markdown
       link: /markdown-examples
     - theme: alt
       text: Blog

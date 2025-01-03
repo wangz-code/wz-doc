@@ -31,6 +31,7 @@ export default defineConfig({
 				text: "笔记",
 				collapsed: false,
 				items: [
+					{ text: "pnpm", link: "/docs/note/pnpm" },
 					{ text: "组装山地车", link: "/docs/note/bicycle" },
 					{ text: "组装台式机", link: "/docs/note/pc" },
 					{ text: "路由器刷机", link: "/docs/note/mirouter" },
