@@ -39,6 +39,7 @@ export default defineConfig({
 					{ text: "树莓派小车", link: "/docs/note/picar" },
 					{ text: "远程Ubuntu", link: "/docs/note/ubuntu" },
 					{ text: "手机直供电", link: "/docs/note/zuk" },
+					{ text: "yolo训练", link: "/docs/note/yolo" },
 				],
 			},
 			{
