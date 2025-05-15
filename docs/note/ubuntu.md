@@ -17,7 +17,6 @@ head:
 - 主板支持网卡唤醒(精粤的默认开启了, 没开启需要在 bios 中启用)
 - Openwrt 路由器
 
-[参考资料](https://cloud.tencent.com/developer/article/2084531)
 
 ### 操作步骤
 
@@ -27,29 +26,27 @@ head:
 # 安装ethtool
 sudo apt-get install ethtool
 
-# 查询网卡是否支持远程唤醒
-sudo ethtool enp3s0 | grep Wake-on
+# 查询本机网卡设备 找到  UP mode
+ip link show
 
-# 开启远程唤醒 d为关闭g为开启 , 实际测试这个命令仅生效一次, 每次开机都要执行,否则就会自动关闭(d), 需要开机自动执行
-sudo ethtool -s enp3s0 wol g
+# 永久启用 WOL
+sudo nano /etc/netplan/01-netcfg.yaml
 
-# 解决重启以后，配置失效问题：
-# 执行创建一个服务
-sudo vim /etc/systemd/system/wol.service
-# 在文件中输入：
-[Unit]
-Description=Configure Wake On LAN
-[Service]
-Type=oneshot
-ExecStart=/sbin/ethtool -s enp3s0 wol g
-[Install]
-WantedBy=basic.target
+# 黏贴
+network:
+  version: 2
+  ethernets:
+    enp4s0:
+      dhcp4: true
+      wakeonlan: true  # 确保有这一行
 
-# 然后保存退出 执行命令：
-sudo systemctl daemon-reload
-sudo systemctl enable wol.service
-sudo systemctl start wol.service
+# 如果提示权限过松, 未提示可以省略
+sudo chmod 600 /etc/netplan/*.yaml
 
+# 应用配置
+sudo netplan apply
+
+# 睡眠可能无法唤醒, 最好是shutdown之后在唤醒
 ```
 
 - Openwrt
