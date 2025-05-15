@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	title: "This dream",
+	title: "This Wz",
 	description: "i love dream",
 	sitemap: {
 		hostname: "https://www.678998.xyz",
