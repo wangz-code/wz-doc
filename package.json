@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
+    "docs:build": "NODE_OPTIONS=\"--max-old-space-size=256\" nice -n 10 vitepress build",
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
