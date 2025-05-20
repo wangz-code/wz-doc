@@ -2,9 +2,9 @@
 title: FFmpeg
 description: FFmpeg
 head:
-  - - meta
-    - name: keywords
-      content: FFmpeg
+    - - meta
+      - name: keywords
+        content: FFmpeg
 ---
 
 ### 个人常用 youtube 下载的 mp4 转 mp3
@@ -16,23 +16,37 @@ ffmpeg -ss 00:00:00 -i video.mp4 -to 00:02:00 -c copy cut.mp4
 
 # 转换
 ffmpeg -i cut.mp4 -vn audio.mp3
+
 # 视频转Gif
 ffmpeg -i test.mp4 test.gif
 
-# 从视频中第3秒开始，截取时长为3秒的片段转化为 gif
+# 从视频中第3秒开始，截取时长为3秒的片段转化为 gif  -ss:表示起始点
 ffmpeg -t 3 -ss 00:00:03 -i test.mp4 test-clip.gif
 
 # 默认转化是中等质量模式，若要转化出高质量的 gif，可以修改比特率
 ffmpeg -i test.mp4 -b 2048k test.gif
 
+# 缩放滤镜 scale=300 宽度 -2:特殊值根据原始视频的宽高比自动计算高度,  -r: 帧率
+ffmpeg -i test.mp4 -vf "scale=300:-2" -r 10 output.gif
+
 # 将GIF 转换为 MP4
 ffmpeg -f gif -i test.gif test.mp4
 
-# 移除视频中的音频（静音） -an 就是禁止音频输出
+# 移除视频中的音频（静音） -an 就是禁止音频输出  -vn 禁用视频流输出
 ffmpeg -i input.mov -an mute-output.mov
 
 # 视频提取帧 将视频提取10帧
 ffmpeg -i index.mp4 -r 10 %03d.jpg;
+
+
+
+```
+
+### mp4 转 wav
+
+```shell
+# -ar 音频采样率  -ac 声道  -filter:a "volume=1.5"  # 音量放大 1.5 倍  -t 30  # 截取前30秒
+ffmpeg -i output.mp4 -vn -ar 16000 -ac 1 audio.wav
 ```
 
 ### ffmpeg 音频 mp4 转 mp3
