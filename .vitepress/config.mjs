@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "This Wz",
 	description: "i love dream",
@@ -9,7 +8,6 @@ export default defineConfig({
 	},
 	outDir: "./dist",
 	themeConfig: {
-		footer: { message: `<a style="margin-right:10px" href="https://beian.miit.gov.cn" target="_blank">豫ICP备2022007076号</a>  <a style="margin-right:10px" href="https://beian.miit.gov.cn">豫ICP备2022007076号-1</a> <a href="/docs/other/disclaimer">免责声明</a>`, copyright: `Copyright © ${new Date().getFullYear()}-present Evan You` },
 		logo: "/logo.jpg",
 		nav: [
 			{ text: "首页", link: "/" },
@@ -69,7 +67,6 @@ export default defineConfig({
 				],
 			},
 		],
-
 		socialLinks: [{ icon: "github", link: "https://github.com/wangz-code" }],
 	},
 });
