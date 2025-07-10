@@ -2,16 +2,13 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 hero:
-  name: "This Blog"
+  name: "This Wz Blog"
   text: "Are You OK"
-  tagline: 平时的折腾日记,ssr渲染,树莓派小车,openwrt,小程序,精简xray
+  tagline: 平时的折腾,树莓派,路由器,小程序,山地车,golang,python,nodejs balabalbala
   actions:
-    - theme: brand
-      text: Markdown
-      link: /markdown-examples
     - theme: alt
-      text: Blog
-      link: /api-examples
+      text: 去看看Blog
+      link: /markdown-examples
 
 features:
   - title: Are
