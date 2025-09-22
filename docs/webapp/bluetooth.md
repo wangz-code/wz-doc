@@ -7,7 +7,7 @@ head:
       content: webapp 小程序 蓝牙
 ---
 
-## 微信小程序蓝牙通讯
+### 微信小程序蓝牙通讯
 
 简单说下个人理解
 每个蓝牙设备(BLE) 都有一个`主服务`还有`设备ID`, 小程序连接设备需要用到`设备ID` 连接后小程序可以获取设备的 `服务` 再由`服务` 获取到蓝牙设备的 `特征值`
@@ -81,7 +81,7 @@ wx.createBLEConnection({
 });
 ```
 
-## 常见问题
+### 常见问题
 
 - iOS 上，对特征值的 read、write、notify 操作，由于系统需要获取特征值实例，传入的 serviceId 与 characteristicId 必须由 wx.getBLEDeviceServices 与 wx.getBLEDeviceCharacteristics 中获取到后才能使用。建议统一在建立连接后先执行 wx.getBLEDeviceServices 与 wx.getBLEDeviceCharacteristics 后再进行与蓝牙设备的数据交互。
 - 考虑到蓝牙功能可以间接进行定位，安卓 6.0 及以上版本，无定位权限或定位开关未打开时，无法进行设备搜索。

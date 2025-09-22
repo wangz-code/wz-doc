@@ -7,7 +7,7 @@ head:
       content: 自建 Git
 ---
 
-## 自建 Git
+### 自建 Git
 
 众所周知的原因 github 非常不稳定, 所以想要自建一个 git, 大致步骤如下
 
@@ -17,7 +17,6 @@ head:
 - 生成密钥 免密 clone pull push
 - 禁用 git 用户使用 shell 登录
 
----
 
 ### 环境介绍
 
