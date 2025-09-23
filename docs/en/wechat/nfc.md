@@ -1,8 +1,12 @@
 ---
 title: 小程序 NFC 通讯
+description: 小程序 NFC 通讯
+head:
+    - - meta
+      - name: keywords
+        content: 小程序 NFC 通讯
 ---
 
-# 小程序 NFC 通讯
 
 ### 前言
 
